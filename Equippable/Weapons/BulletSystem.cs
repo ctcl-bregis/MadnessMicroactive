@@ -57,7 +57,7 @@ public class BulletSystem : Walgelijk.System
         else
             b.Time = float.MaxValue;
 
-        b.Damage = 0; // becomes harmless
+        b.Damage *= b.PierceCoeff;
     }
 
     public override void Render()

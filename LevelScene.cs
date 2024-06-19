@@ -58,7 +58,7 @@ public static class LevelScene
         Prefabs.CreatePlayer(scene);
 
         var casingMat = ParticleMaterialInitialiser.CreateDefaultMaterial();
-        casingMat.SetUniform("mainTex", Resources.Load<Texture>("casing.png"));
+        casingMat.SetUniform("mainTex", Resources.Load<Texture>("casing_9mm.png"));
         MandessUtils.CreateCasingEjectionParticleSystem(scene, casingMat);
 
         level.Init?.Invoke(scene);

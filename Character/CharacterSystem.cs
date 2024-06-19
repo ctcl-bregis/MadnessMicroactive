@@ -71,7 +71,7 @@ public class CharacterSystem : Walgelijk.System
 
                 if (character.Equipped.TryGet(Scene, out var equipped) && equipped.HoldPoints.Length > 1)
                 {
-                    //                                       subtracting because we are adding hand1.Position later, so the origin is effectively the first hold point
+                    // subtracting because we are adding hand1.Position later, so the origin is effectively the first hold point
                     var hp = equipped.GetHoldPoint(1, character.Flipped) - equipped.GetHoldPoint(0, character.Flipped);
                     hand2.Position = Utilities.RotatePoint(hp, hand1.Rotation) + hand1.Position;
                     hand2.Rotation = hand1.Rotation;

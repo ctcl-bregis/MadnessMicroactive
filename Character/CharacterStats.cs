@@ -9,22 +9,22 @@ public struct CharacterStats
 
     public static CharacterStats Grunt => new CharacterStats
     {
-        MaxHealth = 50,
+        MaxHealth = 80,
         MeleeDamage = 15,
-        RegenSpeed = 20
+        RegenSpeed = 30
     };
 
     public static CharacterStats Agent => new CharacterStats
     {
-        MaxHealth = 50,
-        MeleeDamage = 20,
+        MaxHealth = 80,
+        MeleeDamage = 15,
         RegenSpeed = 30
     };
 
     public static CharacterStats Engineer => new CharacterStats
     {
         MaxHealth = 80,
-        MeleeDamage = 25,
+        MeleeDamage = 15,
         RegenSpeed = 40,
         AiBusinessTolerance = 1,
     };
@@ -32,7 +32,7 @@ public struct CharacterStats
     public static CharacterStats Soldat => new CharacterStats
     {
         MaxHealth = 120,
-        MeleeDamage = 30,
+        MeleeDamage = 15,
         RegenSpeed = 50,
         AiBusinessTolerance = 2,
     };   
@@ -47,9 +47,9 @@ public struct CharacterStats
 
     public static CharacterStats Player => new CharacterStats
     {
-        MaxHealth = 450,
-        MeleeDamage = 60,
-        RegenSpeed = 80,
+        MaxHealth = 500,
+        MeleeDamage = 15,
+        RegenSpeed = 60,
         AiBusinessTolerance = int.MaxValue,
     };
 }

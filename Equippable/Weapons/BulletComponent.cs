@@ -10,5 +10,6 @@ public class BulletComponent : Component
     public Vector2 Velocity;
     public float Time;
 
+    public float PierceCoeff;
     public float Damage;
 }

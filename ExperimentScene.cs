@@ -55,7 +55,7 @@ public static class ExperimentScene
         Prefabs.CreatePlayer(scene);
 
         var casingMat = ParticleMaterialInitialiser.CreateDefaultMaterial();
-        casingMat.SetUniform("mainTex", Resources.Load<Texture>("casing.png"));
+        casingMat.SetUniform("mainTex", Resources.Load<Texture>("casing_9mm.png"));
         MandessUtils.CreateCasingEjectionParticleSystem(scene, casingMat);
 
         return scene;
@@ -102,11 +102,13 @@ Press the number keys to create weapons.",
             }
             else
             {
-                if (Input.IsKeyPressed(Key.Space))
+                if (Input.IsKeyPressed(Key.Space)) {
                     EnemySpawnerSystem.SpawnEnemy(Scene, Faction.AAHW, null, Utilities.PickRandom(presets), Utilities.PickRandom(-600, 600));
+                }
 
-                if (Input.IsKeyPressed(Key.Tab))
+                if (Input.IsKeyPressed(Key.Tab)) {
                     EnemySpawnerSystem.SpawnEnemy(Scene, Faction.Player, null, Utilities.PickRandom(presets) with { Outfit = Outfits.Grunt }, Utilities.PickRandom(-600, 600));
+                }
 
                 if (Input.KeysDown != null && Input.KeysDown.Any(d => d >= Key.D0 && d <= Key.D9))
                 {

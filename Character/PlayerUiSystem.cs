@@ -98,12 +98,12 @@ public class PlayerUiSystem : Walgelijk.System
             {
                 if (Scene.TryGetComponentFrom<WeaponComponent>(eq.Entity, out var wpn))
                 {
-                    Draw.Colour = Colors.White;
-                    Draw.FontSize = 48;
-                    Draw.Text(wpn.Weapon.Name, new Vector2(20), Vector2.One, HorizontalTextAlign.Left, VerticalTextAlign.Top);
-                    Draw.FontSize = 32;
                     if (wpn.Weapon is Firearm firearm)
                     {
+                        Draw.Colour = Colors.White;
+                        Draw.FontSize = 48;
+                        Draw.Text(firearm.DisplayedName, new Vector2(20), Vector2.One, HorizontalTextAlign.Left, VerticalTextAlign.Top);
+                        Draw.FontSize = 32;
                         Draw.Colour = wpn.RemainingRounds > 0 ? Colors.Black : Colors.Red;
                         Draw.Text($"{wpn.RemainingRounds}/{firearm.MaxRounds}", new Vector2(20, 20 + 48), Vector2.One, HorizontalTextAlign.Left, VerticalTextAlign.Top);
                     }

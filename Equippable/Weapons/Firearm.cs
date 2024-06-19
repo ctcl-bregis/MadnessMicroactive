@@ -10,15 +10,21 @@ public class Firearm : IWeapon
     public Sound[] Sounds = Array.Empty<Sound>();
 
     public Vector2 BarrelOut;
+    public Vector2 EjectorPort = new Vector2(0, 0);
     public float Dispersion;
     public float Damage;
     public float Recoil;
+    public float PierceCoeff = 0;
     public float AutoInterval;
     public int BulletsPerShot = 1;
 
     public int MaxRounds = 20;
 
+    public string DisplayedName = "";
+
     public string Name { get; }
+
+    public Vector2 EjectorPos;
 
     public Firearm(string name)
     {
@@ -60,12 +66,20 @@ public class Firearm : IWeapon
                     Position = outPos,
                     LastPosition = outPos,
                     Velocity = Utilities.AngleToVector(transform.Rotation + Utilities.RandomFloat(-Dispersion, Dispersion)) * (wielder.Flipped ? -400 : 400),
+                    PierceCoeff = PierceCoeff,
                     Damage = Damage
                 });
 
             Prefabs.CreateMuzzleflash(scene, outPos, dir, Damage / 20);
 
-            MandessUtils.EjectCasing(scene, transform, transform.Position, Utilities.AngleToVector(transform.Rotation + 90) * Utilities.RandomFloat(500, 900));
+            // Probably a better way to do this
+            if (wielder.Flipped) {
+                EjectorPos = transform.Position - EjectorPort;
+            } else {
+                EjectorPos = transform.Position + EjectorPort;
+            }
+
+            MandessUtils.EjectCasing(scene, transform, EjectorPos, Utilities.AngleToVector(transform.Rotation + 90) * Utilities.RandomFloat(500, 900));
 
             weapon.RemainingRounds--;
             if (weapon.RemainingRounds == 0)

@@ -59,7 +59,7 @@ public static class IntroScene
 
         public override void Update()
         {
-            if (Time.SecondsSinceLoad > 8)
+            if ((Time.SecondsSinceLoad > 8) || (Input.IsKeyPressed(Key.Space)))
             {
                 Game.Scene = MenuScene.Create(Game);
                 return;

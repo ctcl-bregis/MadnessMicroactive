@@ -27,11 +27,12 @@ public static class Levels
         new LevelComponent(Resources.Load<Texture>("levels/lvl1.qoi"))
         {
             EnemySpawnRate = 1,
-            MaxEnemies = 1,
-            TotalEnemies = 10,
+            MaxEnemies = 2,
+            TotalEnemies = 20,
             Weapons = new[]
             {
-                Weapons.Firearms.M1911
+                Weapons.Firearms.M1911,
+                Weapons.Firearms.Tec9
             },
             Enemies = new[]
             {
@@ -40,9 +41,9 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl2.qoi"))
         {
-            EnemySpawnRate = 0.5f,
+            EnemySpawnRate = 2f,
             MaxEnemies = 2,
-            TotalEnemies = 10,
+            TotalEnemies = 20,
             Weapons = new[]
             {
                 Weapons.Firearms.M1911,
@@ -59,7 +60,7 @@ public static class Levels
         {
             EnemySpawnRate = 1.5f,
             MaxEnemies = 3,
-            TotalEnemies = 15,
+            TotalEnemies = 25,
             Weapons = new[]
             {
                 Weapons.Firearms.M1911,
@@ -78,12 +79,12 @@ public static class Levels
         {
             EnemySpawnRate = 2,
             MaxEnemies = 4,
-            TotalEnemies = 20,
+            TotalEnemies = 25,
             WalkingRange = new Vector2(-600,340),
             Weapons = new[]
             {
                 Weapons.Firearms.M1911,
-                Weapons.Firearms.Tec9,
+                Weapons.Firearms.Vector,
                 Weapons.Firearms.Ksg,
                 Weapons.Firearms.Deagle,
             },
@@ -96,13 +97,13 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl5.qoi"))
         {
-            EnemySpawnRate = 2,
-            MaxEnemies = 4,
-            TotalEnemies = 15,
+            EnemySpawnRate = 3,
+            MaxEnemies = 6,
+            TotalEnemies = 30,
             Weapons = new[]
             {
                 Weapons.Firearms.M1911,
-                Weapons.Firearms.Tec9,
+                Weapons.Firearms.Vector,
                 Weapons.Firearms.Ksg,
                 Weapons.Firearms.Deagle,
                 Weapons.Firearms.Mp5k,
@@ -117,13 +118,12 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl6.qoi"))
         {
-            EnemySpawnRate = 3,
-            MaxEnemies = 4,
-            TotalEnemies = 20,
+            EnemySpawnRate = 4,
+            MaxEnemies = 8,
+            TotalEnemies = 40,
             Weapons = new[]
             {
-                Weapons.Firearms.M1911,
-                Weapons.Firearms.Tec9,
+                Weapons.Firearms.Vector,
                 Weapons.Firearms.Ksg,
                 Weapons.Firearms.Deagle,
                 Weapons.Firearms.Mp5k,
@@ -138,13 +138,12 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl7.qoi"))
         {
-            EnemySpawnRate = 3,
-            MaxEnemies = 5,
-            TotalEnemies = 20,
+            EnemySpawnRate = 5,
+            MaxEnemies = 10,
+            TotalEnemies = 50,
             Weapons = new[]
             {
-                Weapons.Firearms.M1911,
-                Weapons.Firearms.Tec9,
+                Weapons.Firearms.Vector,
                 Weapons.Firearms.Ksg,
                 Weapons.Firearms.Deagle,
                 Weapons.Firearms.Mp5k,
@@ -160,7 +159,7 @@ public static class Levels
         {
             EnemySpawnRate = 3,
             MaxEnemies = 6,
-            TotalEnemies = 20,
+            TotalEnemies = 50,
             Weapons = Weapons.AllWeapons.ToArray(),
             Enemies = new[]
             {

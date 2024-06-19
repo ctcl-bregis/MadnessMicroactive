@@ -52,8 +52,9 @@ public class LevelProgressSystem : Walgelijk.System
                 }
                 Ui.End();
             }
-            else
+            else {
                 progress.Time += TimeSpan.FromSeconds(Time.DeltaTime);
+            }
         }
     }
 }

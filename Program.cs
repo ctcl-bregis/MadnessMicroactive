@@ -27,7 +27,8 @@ public class Program
 
         Game.UpdateRate = 120;
         Game.FixedUpdateRate = 60;
-        Game.Window.VSync = false;
+        // If this is false, the game ends up using 100% of the CPU thread
+        Game.Window.VSync = true;
         Game.Window.Resizable = false;
 
         Draw.CacheTextMeshes = -1;

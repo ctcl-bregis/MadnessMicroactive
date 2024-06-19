@@ -31,7 +31,6 @@ public class AiControllerSystem : Walgelijk.System
             if (!ai.PickUpTarget.IsValid(Scene) && !ai.KillTarget.IsValid(Scene))
             {
                 // no goal in life
-
                 if (Noise.GetValue(seed, Time.SecondsSinceLoad, -72.634f) > 0.25f)
                     character.WalkAcceleration.X += Math.Sign(Noise.GetValue(seed, seed, Time.SecondsSinceLoad)) * Utilities.RandomFloat(20, 120) * ai.MovementSpeedMultiplier;
 
