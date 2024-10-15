@@ -15,7 +15,7 @@ public static class Weapons
             Sounds = new[] { SoundCache.Instance.LoadSoundEffect(Resources.Load<FixedAudioData>("wep/m1911.wav")) },
             BarrelOut = new Vector2(28, 12),
             DisplayedName = "M1911",
-            Damage = 20,
+            Damage = 30,
             Recoil = 12,
             PierceCoeff = 0.5f,
             AutoInterval = -1,
@@ -33,7 +33,7 @@ public static class Weapons
             Recoil = 4,
             AutoInterval = 0.06f,
             PierceCoeff = 0.5f,
-            MaxRounds = 32,
+            MaxRounds = 16,
             Dispersion = 10,
         };
 
@@ -76,7 +76,7 @@ public static class Weapons
             Sounds = new[] { SoundCache.Instance.LoadSoundEffect(Resources.Load<FixedAudioData>("wep/mp5k.wav")) },
             BarrelOut = new Vector2(46, 29),
             DisplayedName = "MP5K",
-            Damage = 20,
+            Damage = 25,
             Recoil = 5,
             AutoInterval = 0.075f,
             MaxRounds = 16,
@@ -91,12 +91,11 @@ public static class Weapons
             BarrelOut = new Vector2(70, 28),
             EjectorPort = new Vector2(40, 25),
             DisplayedName = "Vector",
-            Damage = 30,
+            Damage = 20,
             PierceCoeff = 0.5f,
             Recoil = 2,
             AutoInterval = 0.05f,
-            // MagEx2 9x19mm
-            MaxRounds = 41,
+            MaxRounds = 33,
             Dispersion = 2
         };
 

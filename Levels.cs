@@ -26,7 +26,7 @@ public static class Levels
     {
         new LevelComponent(Resources.Load<Texture>("levels/lvl1.qoi"))
         {
-            EnemySpawnRate = 1,
+            EnemySpawnRate = 2,
             MaxEnemies = 2,
             TotalEnemies = 20,
             Weapons = new[]
@@ -41,7 +41,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl2.qoi"))
         {
-            EnemySpawnRate = 2f,
+            EnemySpawnRate = 2,
             MaxEnemies = 2,
             TotalEnemies = 20,
             Weapons = new[]
@@ -58,7 +58,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl3.qoi"))
         {
-            EnemySpawnRate = 1.5f,
+            EnemySpawnRate = 2,
             MaxEnemies = 3,
             TotalEnemies = 25,
             Weapons = new[]
@@ -77,7 +77,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl4.qoi"))
         {
-            EnemySpawnRate = 2,
+            EnemySpawnRate = 4,
             MaxEnemies = 4,
             TotalEnemies = 25,
             WalkingRange = new Vector2(-600,340),
@@ -97,7 +97,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl5.qoi"))
         {
-            EnemySpawnRate = 3,
+            EnemySpawnRate = 5,
             MaxEnemies = 6,
             TotalEnemies = 30,
             Weapons = new[]
@@ -118,7 +118,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl6.qoi"))
         {
-            EnemySpawnRate = 4,
+            EnemySpawnRate = 6,
             MaxEnemies = 8,
             TotalEnemies = 40,
             Weapons = new[]
@@ -138,7 +138,7 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl7.qoi"))
         {
-            EnemySpawnRate = 5,
+            EnemySpawnRate = 7,
             MaxEnemies = 10,
             TotalEnemies = 50,
             Weapons = new[]
@@ -157,8 +157,8 @@ public static class Levels
         },
         new LevelComponent(Resources.Load<Texture>("levels/lvl8.qoi"))
         {
-            EnemySpawnRate = 3,
-            MaxEnemies = 6,
+            EnemySpawnRate = 10,
+            MaxEnemies = 20,
             TotalEnemies = 50,
             Weapons = Weapons.AllWeapons.ToArray(),
             Enemies = new[]

@@ -52,7 +52,7 @@ public class EnemySpawnerSystem : Walgelijk.System
         e.IncrementsKillsOnDeath = true;
         e.SetOutfit(scene, preset.Outfit);
 
-        if (Utilities.RandomFloat() > 0.6f)
+        if (Utilities.RandomFloat() > 0.2f)
         {
             IWeapon weaponToSpawnWith;
             if (level != null) {
